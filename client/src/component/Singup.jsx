@@ -24,7 +24,7 @@ export const Singup = ({ show2, handleClose2 }) => {
 
     try {
       if (login) {
-        const res = await fetch("http://localhost:9090/api/user/login", {
+        const res = await fetch("https://writify-lokj.onrender.com/api/user/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, password }),
@@ -47,7 +47,7 @@ export const Singup = ({ show2, handleClose2 }) => {
           return;
         }
 
-        const res = await fetch("http://localhost:9090/api/user/", {
+        const res = await fetch("https://writify-lokj.onrender.com/api/user/", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ name, email, password }),

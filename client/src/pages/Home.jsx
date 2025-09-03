@@ -17,7 +17,7 @@ export const Home = () => {
 
   const fetchNotes = async (email) => {
     try {
-      const response = await axios.get(`http://localhost:9090/api/notes/${email}`);
+      const response = await axios.get(`https://writify-lokj.onrender.com/api/notes/${email}`);
       setNotes(Array.isArray(response.data) ? response.data : []);
     } catch (error) {
       setNotes([]);

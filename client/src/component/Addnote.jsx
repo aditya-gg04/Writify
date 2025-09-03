@@ -22,8 +22,8 @@ export const Addnote = ({ show, handleClose, edit, data }) => {
     try {
       setLoading(true);
       const endpoint = edit
-        ? `http://localhost:9090/api/notes/${data.id}`
-        : `http://localhost:9090/api/notes/${sessionStorage.getItem("email")}`;
+        ? `https://writify-lokj.onrender.com/api/notes/${data.id}`
+        : `https://writify-lokj.onrender.com/api/notes/${sessionStorage.getItem("email")}`;
 
       const res = await fetch(endpoint, {
         method: edit ? "PUT" : "POST",

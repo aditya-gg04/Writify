@@ -14,7 +14,7 @@ export const Card = ({ id, title, desc, date }) => {
   const data = { id, title, desc };
 
   const handleDelete = async () => {
-    const res = await fetch(`http://localhost:9090/api/notes/${id}`, {
+    const res = await fetch(`https://writify-lokj.onrender.com/api/notes/${id}`, {
       method: "DELETE",
     });
     const data = await res.json();
